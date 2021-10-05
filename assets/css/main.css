@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #052F78;
+    --secondary-color: #3BAAE3;
+    --opacity-color: #57a8d1;
+
+    --font: 'Opens Sans';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--primary-color);
+    font: bold 2rem var(--font), sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.container__title {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: var(--secondary-color);
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.container__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.container__item {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+}
+
+.container__item > div {
+    width: 80%;
+}
+
+.container__item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.container__item > input[type='text'] {
+    border: none;
+    width: 80px;
+    font: inherit;
+}
+
+.container__item > input[type='button'], .container__item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.container__item > input[type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+.container__new-item {
+    display: flex;
+    background-color: var(--opacity-color);
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    margin: 10px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+}
+
+.container__new-item > input {
+    background-color: var(--opacity-color);
+    width: 80%;
+    font: inherit;
+}
+
+.container__new-item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
